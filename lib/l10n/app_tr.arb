@@ -1,0 +1,19 @@
+{
+  "hello": "Merhaba",
+  "popular_categories":"Popüler Kategoriler",
+  "food": "Yemek",
+  "games": "Oyunlar",
+  "fashion": "Moda",
+  "tech": "Teknoloji",
+  "home": "Ev",
+  "featured_products": "Featured Products",
+  "catalog": "Katalog",
+  "cart": "Sepet",
+  "account": "Hesap",
+  "wishlist": "İstek Listesi",
+  "login": "Giriş Yap",
+  "register": "Kayıt Ol",
+  "setting": "Ayarlar",
+  "contact_us": "Bize Ulaşın",
+  "change_theme_mode": "Tema Modunu Değiştir"
+}

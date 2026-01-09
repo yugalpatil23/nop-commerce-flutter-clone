@@ -1,0 +1,19 @@
+{
+  "hello": "Hallo",
+  "popular_categories": "Populaire Categorieën",
+  "food": "Eten",
+  "games": "Spellen",
+  "fashion": "Mode",
+  "tech": "Technologie",
+  "home": "Wonen",
+  "featured_products": "Aanbevolen Producten",
+  "catalog": "Catalog",
+  "cart": "Winkelwagen",
+  "account": "Account",
+  "wishlist": "Verlanglijst",
+  "login": "Inloggen",
+  "register": "Registreren",
+  "setting": "Instellingen",
+  "contact_us": "Neem Contact Op",
+  "change_theme_mode": "Thema Wijzigen"
+}

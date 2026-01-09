@@ -1,0 +1,19 @@
+{
+  "hello": "Hello",
+  "popular_categories": "Popular Categories",
+  "food": "Food",
+  "games": "Games",
+  "fashion": "Fashion",
+  "tech": "Tech",
+  "home": "Home",
+  "featured_products": "Featured Products",
+  "catalog": "Catalog",
+  "cart": "Cart",
+  "account": "Account",
+  "wishlist": "Wishlist",
+  "login": "Login",
+  "register": "Register",
+  "setting": "Setting",
+  "contact_us": "Contact Us",
+  "change_theme_mode": "Change Theme Mode"
+}
