@@ -5,10 +5,12 @@ Future<void> showBottomAlert(
   required String title,
   required String description,
   String okText = 'OK',
+  Color? okTextColor,
   String? cancelText,
   VoidCallback? onOk,
   VoidCallback? onCancel,
   bool isDismissible = false,
+  Color? OKButtonColor,
 }) {
   return showModalBottomSheet(
     context: context,
@@ -52,7 +54,7 @@ Future<void> showBottomAlert(
                 children: [
                   if (cancelText != null)
                     Expanded(
-                      child: OutlinedButton(
+                      child: ElevatedButton(
                         onPressed: () {
                           Navigator.pop(context);
                           onCancel?.call();
@@ -65,11 +67,14 @@ Future<void> showBottomAlert(
 
                   Expanded(
                     child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: OKButtonColor,
+                      ),
                       onPressed: () {
                         Navigator.pop(context);
                         onOk?.call();
                       },
-                      child: Text(okText),
+                      child: Text(okText, style: TextStyle(color: okTextColor)),
                     ),
                   ),
                 ],

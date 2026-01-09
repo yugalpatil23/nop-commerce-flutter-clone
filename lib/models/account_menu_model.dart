@@ -32,7 +32,7 @@ final menuProvider = Provider<List<AccountMenuModel>>((ref) {
       AccountMenuModel(
         'Register',
         Icons.app_registration,
-        location: Routes.notFoundNamedScreen,
+        location: Routes.registerNamedScreen,
       ),
     ]);
   } else {
@@ -45,11 +45,6 @@ final menuProvider = Provider<List<AccountMenuModel>>((ref) {
       AccountMenuModel(
         'Rewards',
         Icons.star_border,
-        location: Routes.notFoundNamedScreen,
-      ),
-      AccountMenuModel(
-        'Logout',
-        Icons.logout,
         location: Routes.notFoundNamedScreen,
       ),
     ]);
@@ -72,6 +67,16 @@ final menuProvider = Provider<List<AccountMenuModel>>((ref) {
       location: '${Routes.accountNamedScreen}${Routes.changeThemeNamedScreen}',
     ),
   ]);
+
+  if (isLoggedIn) {
+    returnMenu.addAll([
+      AccountMenuModel(
+        'Logout',
+        Icons.logout,
+        location: Routes.notFoundNamedScreen,
+      ),
+    ]);
+  }
 
   return returnMenu;
 });

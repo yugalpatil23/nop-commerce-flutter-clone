@@ -14,10 +14,13 @@ class Routes {
   //Account
   static const accountNamedScreen = '/account';
   static const changeThemeNamedScreen = '/changeThemeMode';
-  static const loginNamedScreen = '/login';
-  static const forgotPasswordNamedScreen = '/forgotPassword';
   static const settingsNamedScreen = '/settings';
   static const contactUsNamedScreen = '/contactUs';
+
+  // Authentication
+  static const loginNamedScreen = '/login';
+  static const registerNamedScreen = '/register';
+  static const forgotPasswordNamedScreen = '/forgotPassword';
 
   //Product
   static const productDetailsNamedScreen = '/productDetails';

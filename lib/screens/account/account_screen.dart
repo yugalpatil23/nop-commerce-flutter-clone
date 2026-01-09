@@ -7,6 +7,7 @@ import 'package:flutter_application_2/providers/auth_provider.dart';
 import 'package:flutter_application_2/providers/theme_provider.dart';
 import 'package:flutter_application_2/utils/app_colors.dart';
 import 'package:flutter_application_2/utils/app_constants.dart';
+import 'package:flutter_application_2/widgets/app_bottom_alert.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
@@ -18,6 +19,21 @@ class AccountScreen extends ConsumerWidget {
     final auth = ref.watch(authProvider);
     final menus = ref.watch(menuProvider);
     final l10n = AppLocalizations.of(context)!;
+
+    logoutClick() {
+      showBottomAlert(
+        context,
+        title: 'Logout',
+        description: 'Are you sure you want to logout?',
+        okText: "Logout",
+        OKButtonColor: AppColors.errorColor,
+        cancelText: "Cancel",
+        onOk: () {
+          ref.read(authProvider.notifier).logout();
+        },
+        okTextColor: Colors.white,
+      );
+    }
 
     return Scaffold(
       appBar: AppBar(
@@ -85,7 +101,7 @@ class AccountScreen extends ConsumerWidget {
                   onTap: () {
                     log("loggg---${item.location}");
                     if (item.title == 'Logout') {
-                      ref.read(authProvider.notifier).logout();
+                      logoutClick();
                     } else {
                       context.push(item.location);
                     }

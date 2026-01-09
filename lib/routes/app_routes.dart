@@ -5,6 +5,7 @@ import 'package:flutter_application_2/screens/account/settings_screen.dart';
 import 'package:flutter_application_2/screens/account/theme_mode_screen.dart';
 import 'package:flutter_application_2/screens/auth/forgot_password_screen.dart';
 import 'package:flutter_application_2/screens/auth/login_screen.dart';
+import 'package:flutter_application_2/screens/auth/register_screen.dart';
 import 'package:flutter_application_2/screens/cart/cart_screen.dart';
 import 'package:flutter_application_2/screens/catalog/catalog_screen.dart';
 import 'package:flutter_application_2/screens/home/home_details_screen.dart';
@@ -32,6 +33,10 @@ class AppRoutes {
       GoRoute(
         path: Routes.settingsNamedScreen,
         builder: (context, state) => const SettingsScreen(),
+      ),
+      GoRoute(
+        path: Routes.registerNamedScreen,
+        builder: (context, state) => const RegisterScreen(),
       ),
       GoRoute(
         path: Routes.contactUsNamedScreen,

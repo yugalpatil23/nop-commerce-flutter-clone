@@ -49,7 +49,7 @@ class AppTextFormField extends StatelessWidget {
                 )
               : null,
           hintText: hintText,
-          labelText: labelText,
+          labelText: "$labelText${isRequired ? " *" : ""}",
           suffixIcon: suffixIcon,
         ),
         validator: validator,
