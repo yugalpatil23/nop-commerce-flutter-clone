@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_2/screens/account/account_screen.dart';
+import 'package:flutter_application_2/screens/account/contact_us_screen.dart';
 import 'package:flutter_application_2/screens/account/settings_screen.dart';
 import 'package:flutter_application_2/screens/account/theme_mode_screen.dart';
 import 'package:flutter_application_2/screens/auth/forgot_password_screen.dart';
@@ -31,6 +32,10 @@ class AppRoutes {
       GoRoute(
         path: Routes.settingsNamedScreen,
         builder: (context, state) => const SettingsScreen(),
+      ),
+      GoRoute(
+        path: Routes.contactUsNamedScreen,
+        builder: (context, state) => const ContactUsScreen(),
       ),
       GoRoute(
         path: '${Routes.productDetailsNamedScreen}/:id',

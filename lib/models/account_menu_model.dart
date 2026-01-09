@@ -64,7 +64,7 @@ final menuProvider = Provider<List<AccountMenuModel>>((ref) {
     AccountMenuModel(
       'Contact Us',
       Icons.help_outline,
-      location: Routes.notFoundNamedScreen,
+      location: Routes.contactUsNamedScreen,
     ),
     AccountMenuModel(
       'Change Theme Mode',

@@ -24,16 +24,36 @@ class AppTextFormField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return TextFormField(
-      controller: controller,
-      obscureText: obscureText,
-      keyboardType: keyboardType,
-      decoration: InputDecoration(
-        hintText: hintText,
-        labelText: labelText,
-        suffixIcon: suffixIcon,
+    return Container(
+      padding: const EdgeInsets.only(bottom: 16.0),
+      child: TextFormField(
+        maxLines: keyboardType == TextInputType.multiline ? 5 : 1,
+        controller: controller,
+        obscureText: obscureText,
+        keyboardType: keyboardType,
+
+        decoration: InputDecoration(
+          border: keyboardType == TextInputType.multiline
+              ? OutlineInputBorder(borderRadius: BorderRadius.circular(30))
+              : null,
+          enabledBorder: keyboardType == TextInputType.multiline
+              ? OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(30),
+                  borderSide: const BorderSide(color: Colors.grey),
+                )
+              : null,
+          focusedBorder: keyboardType == TextInputType.multiline
+              ? OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(30),
+                  borderSide: const BorderSide(color: Colors.blueAccent),
+                )
+              : null,
+          hintText: hintText,
+          labelText: labelText,
+          suffixIcon: suffixIcon,
+        ),
+        validator: validator,
       ),
-      validator: validator,
     );
   }
 }
