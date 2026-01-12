@@ -11,12 +11,15 @@ class Routes {
   static const catalogNamedScreen = '/catalog';
   static const cartNamedScreen = '/cart';
   static const notFoundNamedScreen = '/notfound';
+  static const wishlistNamedScreen = '/wishlist';
 
   //Account
   static const accountNamedScreen = '/account';
   static const changeThemeNamedScreen = '/changeThemeMode';
   static const settingsNamedScreen = '/settings';
   static const contactUsNamedScreen = '/contactUs';
+  static const myOrdersNamedScreen = '/myOrders';
+  static const myRewardsNamedScreen = '/myRewards';
 
   // Authentication
   static const loginNamedScreen = '/login';

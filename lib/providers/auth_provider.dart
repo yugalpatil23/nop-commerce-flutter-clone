@@ -1,5 +1,7 @@
 import 'dart:developer';
 
+import 'package:flutter/material.dart';
+import 'package:flutter_application_2/utils/app_toast.dart';
 import 'package:flutter_riverpod/legacy.dart';
 
 import '../models/user_model.dart';
@@ -57,6 +59,8 @@ class AuthNotifier extends StateNotifier<AuthState> {
       final user = await _userService.getProfile(token);
 
       state = AuthState(user: user);
+
+      showAppToast("Login Successful", color: Colors.green);
     } catch (e) {
       log("error in login--${e}");
     }

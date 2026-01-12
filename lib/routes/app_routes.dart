@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_2/screens/account/my_rewards.dart';
+import 'package:flutter_application_2/screens/cart/wishlist_screen.dart';
 
 import 'package:go_router/go_router.dart';
 
 import '../screens/account/account_screen.dart';
 import '../screens/account/contact_us_screen.dart';
+import '../screens/account/my_orders.dart';
 import '../screens/account/settings_screen.dart';
 import '../screens/account/theme_mode_screen.dart';
 import '../screens/auth/forgot_password_screen.dart';
@@ -19,14 +22,15 @@ import '../screens/products/product_details_screen.dart';
 import '../screens/splash_screen.dart';
 import '../utils/app_routes_constants.dart';
 
+final rootNavigatorKey = GlobalKey<NavigatorState>();
+
 class AppRoutes {
-  static final _rootNavigatorKey = GlobalKey<NavigatorState>();
   static final _shellNavigatorKey = GlobalKey<NavigatorState>();
 
   static final GoRouter _router = GoRouter(
     initialLocation: Routes.splashNamedScreen,
     debugLogDiagnostics: true,
-    navigatorKey: _rootNavigatorKey,
+    navigatorKey: rootNavigatorKey,
     routes: [
       GoRoute(
         path: Routes.splashNamedScreen,
@@ -43,6 +47,18 @@ class AppRoutes {
       GoRoute(
         path: Routes.contactUsNamedScreen,
         builder: (context, state) => const ContactUsScreen(),
+      ),
+      GoRoute(
+        path: Routes.wishlistNamedScreen,
+        builder: (context, state) => const WishlistScreen(),
+      ),
+      GoRoute(
+        path: Routes.myOrdersNamedScreen,
+        builder: (context, state) => const MyOrders(),
+      ),
+      GoRoute(
+        path: Routes.myRewardsNamedScreen,
+        builder: (context, state) => const MyRewards(),
       ),
       GoRoute(
         path: '${Routes.productDetailsNamedScreen}/:id',

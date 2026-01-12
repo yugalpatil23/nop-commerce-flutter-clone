@@ -19,7 +19,7 @@ final menuProvider = Provider<List<AccountMenuModel>>((ref) {
     AccountMenuModel(
       'Wishlist',
       Icons.favorite_outline,
-      location: Routes.notFoundNamedScreen,
+      location: Routes.wishlistNamedScreen,
     ),
   ];
 
@@ -41,12 +41,12 @@ final menuProvider = Provider<List<AccountMenuModel>>((ref) {
       AccountMenuModel(
         'My Orders',
         Icons.shopping_bag,
-        location: Routes.notFoundNamedScreen,
+        location: Routes.myOrdersNamedScreen,
       ),
       AccountMenuModel(
         'Rewards',
         Icons.star_border,
-        location: Routes.notFoundNamedScreen,
+        location: Routes.myRewardsNamedScreen,
       ),
     ]);
   }
