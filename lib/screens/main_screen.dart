@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_2/providers/active_bottom_tab_provider.dart';
-import 'package:flutter_application_2/utils/app_constants.dart';
-import 'package:flutter_application_2/widgets/named_nav_bar_item_widget.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
+
+import '../providers/active_bottom_tab_provider.dart';
+import '../utils/app_routes_constants.dart';
+import '../widgets/named_nav_bar_item_widget.dart';
 
 class MainScreen extends ConsumerWidget {
   final Widget screen;

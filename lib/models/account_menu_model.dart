@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_2/providers/auth_provider.dart';
-import 'package:flutter_application_2/utils/app_constants.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+
+import '../providers/auth_provider.dart';
+import '../utils/app_routes_constants.dart';
 
 class AccountMenuModel {
   final String title;

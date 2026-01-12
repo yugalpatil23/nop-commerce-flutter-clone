@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_2/l10n/app_localizations.dart';
-import 'package:flutter_application_2/models/product_model.dart';
-import 'package:flutter_application_2/widgets/featured_product_card.dart';
+
+import '../l10n/app_localizations.dart';
+import '../models/product_model.dart';
+import 'featured_product_card.dart';
 
 class HomeFeaturedProducts extends StatefulWidget {
   const HomeFeaturedProducts({super.key});

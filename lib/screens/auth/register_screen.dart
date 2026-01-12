@@ -1,15 +1,15 @@
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_application_2/providers/auth_provider.dart';
-import 'package:flutter_application_2/utils/app_assets.dart';
-import 'package:flutter_application_2/utils/app_constants.dart';
-import 'package:flutter_application_2/widgets/app_elevated_button.dart';
-import 'package:flutter_application_2/widgets/app_text_button.dart';
-import 'package:flutter_application_2/widgets/app_text_form_field.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
+
+import '../../providers/auth_provider.dart';
+import '../../utils/app_assets.dart';
+import '../../utils/app_validators.dart';
+import '../../widgets/app_elevated_button.dart';
+import '../../widgets/app_text_form_field.dart';
 
 enum Gender { male, female, other }
 
@@ -51,7 +51,29 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
   }
 
   void _register() async {
-    if (_formKey.currentState!.validate()) {}
+    if (_formKey.currentState!.validate()) {
+      await ref
+          .read(authProvider.notifier)
+          .register(
+            _selectedGender,
+            _firstNameController.text,
+            _lastNameController.text,
+            _emailController.text,
+            _companyController.text,
+            isNewsLatterEnable,
+            _passwordController.text,
+          );
+
+      final auth = ref.watch(authProvider);
+      log("__________${auth.isLoggedIn}");
+      if (auth.isLoggedIn) {
+        context.pop();
+      }
+      // TODO: API Call
+      // Future.delayed(const Duration(seconds: 2), () {
+      //   setState(() => _isLoading = false);
+      // });
+    }
   }
 
   @override
@@ -163,15 +185,7 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
                         labelText: 'Email',
                         keyboardType: TextInputType.emailAddress,
                         validator: (value) {
-                          if (value == null || value.isEmpty) {
-                            return "Email is required";
-                          }
-                          if (!RegExp(
-                            r'^[\w-\.]+@([\w-]+\.)+[\w]{2,4}',
-                          ).hasMatch(value)) {
-                            return "Enter valid email";
-                          }
-                          return null;
+                          return AppValidators.validateEmail(value);
                         },
                       ),
                     ],
@@ -261,13 +275,7 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
                         obscureText: _obscurePassword,
                         labelText: "Password",
                         validator: (value) {
-                          if (value == null || value.isEmpty) {
-                            return "Password is required";
-                          }
-                          if (value.length < 6) {
-                            return "Password must be at least 6 characters";
-                          }
-                          return null;
+                          return AppValidators.validatePassword(value);
                         },
                       ),
                       SizedBox(height: 10),

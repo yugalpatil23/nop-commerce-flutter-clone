@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_2/l10n/app_localizations.dart';
-import 'package:flutter_application_2/main.dart';
-import 'package:flutter_application_2/widgets/home_carousel_slider.dart';
-import 'package:flutter_application_2/widgets/home_featured_products.dart';
-import 'package:flutter_application_2/widgets/home_popular_categories.dart';
+
+import '../../widgets/home_carousel_slider.dart';
+import '../../widgets/home_featured_products.dart';
+import '../../widgets/home_popular_categories.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});

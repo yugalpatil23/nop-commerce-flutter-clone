@@ -1,7 +1,8 @@
 import 'dart:developer';
 
-import 'package:flutter_application_2/utils/app_constants.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
+
+import '../utils/app_constants.dart';
 
 class SecureStorageService {
   final _storage = const FlutterSecureStorage();

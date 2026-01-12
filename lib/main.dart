@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_2/l10n/app_localizations.dart';
-import 'package:flutter_application_2/providers/auth_provider.dart';
-import 'package:flutter_application_2/providers/language_provider.dart';
-import 'package:flutter_application_2/providers/theme_provider.dart';
-import 'package:flutter_application_2/routes/app_routes.dart';
-import 'package:flutter_application_2/utils/app_theme.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
+
+import 'l10n/app_localizations.dart';
+import 'providers/auth_provider.dart';
+import 'providers/language_provider.dart';
+import 'providers/theme_provider.dart';
+import 'routes/app_routes.dart';
+import 'utils/app_theme.dart';
 
 void main() {
   runApp(ProviderScope(child: MyApp()));

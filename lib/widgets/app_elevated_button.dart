@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_2/utils/app_colors.dart';
+
+import '../utils/app_colors.dart';
 
 class AppElevatedButton extends StatelessWidget {
   const AppElevatedButton({

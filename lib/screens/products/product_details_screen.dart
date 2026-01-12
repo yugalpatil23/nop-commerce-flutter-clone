@@ -1,19 +1,3 @@
-// import 'dart:developer';
-
-// import 'package:flutter/material.dart';
-
-// class ProductDetailsScreen extends StatelessWidget {
-//   const ProductDetailsScreen({super.key, required this.productId});
-
-//   final int productId;
-
-//   @override
-//   Widget build(BuildContext context) {
-//     log("dsdsdsdsds==========${productId}");
-//     return Text("Dsdsdsdsd");
-//   }
-// }
-
 import 'package:flutter/material.dart';
 import 'package:photo_view/photo_view.dart';
 import 'package:photo_view/photo_view_gallery.dart';

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_2/l10n/app_localizations.dart';
-import 'package:flutter_application_2/main.dart';
-import 'package:flutter_application_2/models/category_model.dart';
-import 'package:flutter_application_2/widgets/category_item.dart';
+
+import '../l10n/app_localizations.dart';
+import '../models/category_model.dart';
+import 'category_item.dart';
 
 class HomePopularCategories extends StatefulWidget {
   const HomePopularCategories({super.key});

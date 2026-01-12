@@ -1,15 +1,14 @@
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_application_2/l10n/app_localizations.dart';
-import 'package:flutter_application_2/models/account_menu_model.dart';
-import 'package:flutter_application_2/providers/auth_provider.dart';
-import 'package:flutter_application_2/providers/theme_provider.dart';
-import 'package:flutter_application_2/utils/app_colors.dart';
-import 'package:flutter_application_2/utils/app_constants.dart';
-import 'package:flutter_application_2/widgets/app_bottom_alert.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
+
+import '../../l10n/app_localizations.dart';
+import '../../models/account_menu_model.dart';
+import '../../providers/auth_provider.dart';
+import '../../utils/app_colors.dart';
+import '../../widgets/app_bottom_alert.dart';
 
 class AccountScreen extends ConsumerWidget {
   const AccountScreen({super.key});

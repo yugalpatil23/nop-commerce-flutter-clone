@@ -1,12 +1,12 @@
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_application_2/models/product_model.dart';
-import 'package:flutter_application_2/routes/app_routes.dart';
-import 'package:flutter_application_2/utils/app_constants.dart';
-import 'package:flutter_application_2/widgets/app_elevated_button.dart';
-import 'package:flutter_application_2/widgets/star_rating.dart';
 import 'package:go_router/go_router.dart';
+
+import '../models/product_model.dart';
+import '../utils/app_routes_constants.dart';
+import 'app_elevated_button.dart';
+import 'star_rating.dart';
 
 class FeaturedProductCard extends StatelessWidget {
   final ProductModel product;

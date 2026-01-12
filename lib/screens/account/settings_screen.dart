@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_2/providers/currency_provider.dart';
-import 'package:flutter_application_2/providers/language_provider.dart';
-import 'package:flutter_application_2/providers/tax_provider.dart';
-import 'package:flutter_application_2/utils/app_assets.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+
+import '../../providers/currency_provider.dart';
+import '../../providers/language_provider.dart';
+import '../../providers/tax_provider.dart';
+import '../../utils/app_assets.dart';
 
 class SettingsScreen extends ConsumerWidget {
   const SettingsScreen({super.key});

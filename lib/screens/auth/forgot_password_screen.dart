@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_2/utils/app_assets.dart';
-import 'package:flutter_application_2/widgets/app_elevated_button.dart';
-import 'package:flutter_application_2/widgets/app_text_button.dart';
-import 'package:flutter_application_2/widgets/app_text_form_field.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
+
+import '../../utils/app_assets.dart';
+import '../../utils/app_validators.dart';
+import '../../widgets/app_elevated_button.dart';
+import '../../widgets/app_text_button.dart';
+import '../../widgets/app_text_form_field.dart';
 
 class ForgotPasswordScreen extends StatefulWidget {
   const ForgotPasswordScreen({super.key});
@@ -60,15 +62,7 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
                     labelText: 'Email',
                     keyboardType: TextInputType.emailAddress,
                     validator: (value) {
-                      if (value == null || value.isEmpty) {
-                        return "Email is required";
-                      }
-                      if (!RegExp(
-                        r'^[\w-\.]+@([\w-]+\.)+[\w]{2,4}',
-                      ).hasMatch(value)) {
-                        return "Enter valid email";
-                      }
-                      return null;
+                      return AppValidators.validateEmail(value);
                     },
                   ),
 

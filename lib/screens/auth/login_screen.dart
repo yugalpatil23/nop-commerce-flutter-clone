@@ -1,15 +1,17 @@
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_application_2/providers/auth_provider.dart';
-import 'package:flutter_application_2/utils/app_assets.dart';
-import 'package:flutter_application_2/utils/app_constants.dart';
-import 'package:flutter_application_2/widgets/app_elevated_button.dart';
-import 'package:flutter_application_2/widgets/app_text_button.dart';
-import 'package:flutter_application_2/widgets/app_text_form_field.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
+
+import '../../providers/auth_provider.dart';
+import '../../utils/app_assets.dart';
+import '../../utils/app_routes_constants.dart';
+import '../../utils/app_validators.dart';
+import '../../widgets/app_elevated_button.dart';
+import '../../widgets/app_text_button.dart';
+import '../../widgets/app_text_form_field.dart';
 
 class LoginScreen extends ConsumerStatefulWidget {
   const LoginScreen({super.key});
@@ -75,15 +77,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                 labelText: 'Email',
                 keyboardType: TextInputType.emailAddress,
                 validator: (value) {
-                  if (value == null || value.isEmpty) {
-                    return "Email is required";
-                  }
-                  if (!RegExp(
-                    r'^[\w-\.]+@([\w-]+\.)+[\w]{2,4}',
-                  ).hasMatch(value)) {
-                    return "Enter valid email";
-                  }
-                  return null;
+                  return AppValidators.validateEmail(value);
                 },
               ),
 
@@ -105,13 +99,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                 obscureText: _obscurePassword,
                 labelText: "Password",
                 validator: (value) {
-                  if (value == null || value.isEmpty) {
-                    return "Password is required";
-                  }
-                  if (value.length < 6) {
-                    return "Password must be at least 6 characters";
-                  }
-                  return null;
+                  return AppValidators.validatePassword(value);
                 },
               ),
 

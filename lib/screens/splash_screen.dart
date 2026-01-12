@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_2/l10n/app_localizations.dart';
-import 'package:flutter_application_2/main.dart';
-import 'package:flutter_application_2/utils/app_assets.dart';
-import 'package:flutter_application_2/utils/app_colors.dart';
-import 'package:flutter_application_2/utils/app_constants.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
+
+import '../utils/app_assets.dart';
+import '../utils/app_colors.dart';
+import '../utils/app_routes_constants.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});

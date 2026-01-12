@@ -1,21 +1,23 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_2/screens/account/account_screen.dart';
-import 'package:flutter_application_2/screens/account/contact_us_screen.dart';
-import 'package:flutter_application_2/screens/account/settings_screen.dart';
-import 'package:flutter_application_2/screens/account/theme_mode_screen.dart';
-import 'package:flutter_application_2/screens/auth/forgot_password_screen.dart';
-import 'package:flutter_application_2/screens/auth/login_screen.dart';
-import 'package:flutter_application_2/screens/auth/register_screen.dart';
-import 'package:flutter_application_2/screens/cart/cart_screen.dart';
-import 'package:flutter_application_2/screens/catalog/catalog_screen.dart';
-import 'package:flutter_application_2/screens/home/home_details_screen.dart';
-import 'package:flutter_application_2/screens/home/home_screen.dart';
-import 'package:flutter_application_2/screens/main_screen.dart';
-import 'package:flutter_application_2/screens/not_found_screen.dart';
-import 'package:flutter_application_2/screens/products/product_details_screen.dart';
-import 'package:flutter_application_2/screens/splash_screen.dart';
-import 'package:flutter_application_2/utils/app_constants.dart';
+
 import 'package:go_router/go_router.dart';
+
+import '../screens/account/account_screen.dart';
+import '../screens/account/contact_us_screen.dart';
+import '../screens/account/settings_screen.dart';
+import '../screens/account/theme_mode_screen.dart';
+import '../screens/auth/forgot_password_screen.dart';
+import '../screens/auth/login_screen.dart';
+import '../screens/auth/register_screen.dart';
+import '../screens/cart/cart_screen.dart';
+import '../screens/catalog/catalog_screen.dart';
+import '../screens/home/home_details_screen.dart';
+import '../screens/home/home_screen.dart';
+import '../screens/main_screen.dart';
+import '../screens/not_found_screen.dart';
+import '../screens/products/product_details_screen.dart';
+import '../screens/splash_screen.dart';
+import '../utils/app_routes_constants.dart';
 
 class AppRoutes {
   static final _rootNavigatorKey = GlobalKey<NavigatorState>();

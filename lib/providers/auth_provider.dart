@@ -62,6 +62,38 @@ class AuthNotifier extends StateNotifier<AuthState> {
     }
   }
 
+  Future<void> register(
+    String gender,
+    String firstName,
+    String lastName,
+    String email,
+    String companyName,
+    bool newsLetter,
+    String password,
+  ) async {
+    try {
+      state = state.copyWith(isLoading: true);
+
+      final token = await _authService.register(
+        gender,
+        firstName,
+        lastName,
+        email,
+        companyName,
+        newsLetter,
+        password,
+      );
+      log("JWT TOKEN-----${token}");
+      await _storage.saveToken(token);
+
+      final user = await _userService.getProfile(token);
+
+      state = AuthState(user: user);
+    } catch (e) {
+      log("error in login--${e}");
+    }
+  }
+
   Future<void> logout() async {
     await _storage.clearToken();
     state = AuthState();
