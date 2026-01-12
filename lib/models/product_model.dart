@@ -5,6 +5,7 @@ class ProductModel {
   final double rating;
   final double price;
   final double? oldPrice;
+  final int? id;
 
   ProductModel({
     required this.name,
@@ -13,5 +14,6 @@ class ProductModel {
     required this.rating,
     required this.price,
     this.oldPrice,
+    this.id,
   });
 }

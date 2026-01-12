@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../utils/app_colors.dart';
+import 'app_circularprogress_indicator.dart';
 
 class AppElevatedButton extends StatelessWidget {
   const AppElevatedButton({
@@ -40,12 +41,8 @@ class AppElevatedButton extends StatelessWidget {
           ),
         ),
         child: isLoading && showLoading
-            ? SizedBox(
-                height: loadingIndicatorSize,
-                width: loadingIndicatorSize,
-                child: const CircularProgressIndicator(),
-              )
-            : Text(btnTitle),
+            ? AppCircularprogressIndicator()
+            : Text(btnTitle, style: TextStyle(color: Colors.white)),
       ),
     );
   }

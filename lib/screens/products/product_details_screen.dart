@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_2/widgets/app_elevated_button.dart';
 import 'package:photo_view/photo_view.dart';
 import 'package:photo_view/photo_view_gallery.dart';
 import 'package:share_plus/share_plus.dart';
@@ -202,11 +203,9 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
             child: SizedBox(
               width: double.infinity,
               height: 48,
-              child: ElevatedButton(
-                onPressed: () {
-                  // TODO: Add to cart logic
-                },
-                child: const Text("Add to Cart"),
+              child: AppElevatedButton(
+                btnTitle: "Add to Cart",
+                onPressed: () {},
               ),
             ),
           ),
