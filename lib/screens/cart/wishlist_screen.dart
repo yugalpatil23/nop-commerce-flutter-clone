@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_2/widgets/app_elevated_button.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+
+import '../../widgets/app_elevated_button.dart';
 
 class WishlistScreen extends ConsumerWidget {
   const WishlistScreen({super.key});

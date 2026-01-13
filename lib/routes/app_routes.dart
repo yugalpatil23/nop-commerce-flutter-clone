@@ -1,18 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_2/screens/account/my_rewards.dart';
-import 'package:flutter_application_2/screens/cart/wishlist_screen.dart';
-
 import 'package:go_router/go_router.dart';
 
 import '../screens/account/account_screen.dart';
 import '../screens/account/contact_us_screen.dart';
 import '../screens/account/my_orders.dart';
+import '../screens/account/my_rewards.dart';
 import '../screens/account/settings_screen.dart';
 import '../screens/account/theme_mode_screen.dart';
 import '../screens/auth/forgot_password_screen.dart';
 import '../screens/auth/login_screen.dart';
 import '../screens/auth/register_screen.dart';
 import '../screens/cart/cart_screen.dart';
+import '../screens/cart/wishlist_screen.dart';
 import '../screens/catalog/catalog_screen.dart';
 import '../screens/home/home_details_screen.dart';
 import '../screens/home/home_screen.dart';

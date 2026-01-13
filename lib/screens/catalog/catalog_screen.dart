@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_2/models/category_model.dart';
+
+import '../../models/category_model.dart';
 
 class CatalogScreen extends StatelessWidget {
   const CatalogScreen({super.key});

@@ -1,13 +1,13 @@
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_application_2/utils/app_toast.dart';
 import 'package:flutter_riverpod/legacy.dart';
 
 import '../models/user_model.dart';
 import '../services/auth_service.dart';
 import '../services/user_service.dart';
 import '../services/secure_storage_service.dart';
+import '../utils/app_toast.dart';
 
 class AuthState {
   final bool isLoading;
