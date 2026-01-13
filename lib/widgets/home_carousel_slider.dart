@@ -26,7 +26,7 @@ class HomeCarouselSlider extends ConsumerWidget {
                   height: 200,
                   autoPlay: true,
                   enlargeCenterPage: true,
-                  viewportFraction: 1,
+                  viewportFraction: 0.85,
                   autoPlayInterval: const Duration(seconds: 3),
                   onPageChanged: (index, reason) {
                     carouselNotifier.setCurrentIndex(index);
@@ -38,7 +38,7 @@ class HomeCarouselSlider extends ConsumerWidget {
                       log("Image Tapped");
                     },
                     child: ClipRRect(
-                      borderRadius: BorderRadius.circular(0),
+                      borderRadius: BorderRadius.circular(20),
                       child: Image.network(
                         item.imageUrl,
                         fit: BoxFit.cover,

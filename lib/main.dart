@@ -15,25 +15,27 @@ void main() {
 class MyApp extends ConsumerWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final themeMode = ref.watch(themeProvider);
-    final auth = ref.watch(authProvider);
     final locale = ref.watch(languageProvider);
+
+    //Initialize auth provider so we can check the user is logged in or not initially
+    final auth = ref.watch(authProvider);
+
     return MaterialApp.router(
       routeInformationProvider: AppRoutes.router.routeInformationProvider,
       routeInformationParser: AppRoutes.router.routeInformationParser,
       routerDelegate: AppRoutes.router.routerDelegate,
       title: 'Go Router',
       debugShowCheckedModeBanner: false,
+
+      //Theme
       theme: lightTheme,
       darkTheme: darkTheme,
       themeMode: themeMode,
 
-      ///
-      ///Localization
-      ///
+      //Localization
       locale: locale,
       supportedLocales: AppLocalizations.supportedLocales,
       localizationsDelegates: AppLocalizations.localizationsDelegates,
