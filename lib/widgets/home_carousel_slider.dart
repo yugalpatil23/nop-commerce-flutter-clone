@@ -1,5 +1,6 @@
 import 'dart:developer';
 
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:carousel_slider/carousel_slider.dart';
@@ -39,10 +40,21 @@ class HomeCarouselSlider extends ConsumerWidget {
                     },
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(20),
-                      child: Image.network(
-                        item.imageUrl,
-                        fit: BoxFit.cover,
+                      child: CachedNetworkImage(
                         width: double.infinity,
+                        fit: BoxFit.cover,
+                        imageUrl: item.imageUrl,
+                        progressIndicatorBuilder:
+                            (context, url, downloadProgress) => Center(
+                              child: SizedBox(
+                                height: 25,
+                                width: 25,
+                                child: CircularProgressIndicator(
+                                  value: downloadProgress.progress,
+                                ),
+                              ),
+                            ),
+                        errorWidget: (context, url, error) => Icon(Icons.error),
                       ),
                     ),
                   );

@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
 import '../models/category_model.dart';
@@ -21,7 +22,21 @@ class CategoryItem extends StatelessWidget {
             ),
             child: ClipRRect(
               borderRadius: BorderRadius.circular(8),
-              child: Image.network(category.imageUrl, fit: BoxFit.cover),
+              child: CachedNetworkImage(
+                fit: BoxFit.cover,
+                imageUrl: category.imageUrl,
+                progressIndicatorBuilder: (context, url, downloadProgress) =>
+                    Center(
+                      child: SizedBox(
+                        height: 25,
+                        width: 25,
+                        child: CircularProgressIndicator(
+                          value: downloadProgress.progress,
+                        ),
+                      ),
+                    ),
+                errorWidget: (context, url, error) => Icon(Icons.error),
+              ),
             ),
           ),
           Expanded(
