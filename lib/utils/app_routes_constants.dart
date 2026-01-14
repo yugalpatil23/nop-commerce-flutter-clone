@@ -8,10 +8,13 @@ class Routes {
   static const splashNamedScreen = '/splash';
   static const homeNamedScreen = '/home';
   static const homeDetailsNamedScreen = 'details';
-  static const catalogNamedScreen = '/catalog';
   static const cartNamedScreen = '/cart';
   static const notFoundNamedScreen = '/notfound';
   static const wishlistNamedScreen = '/wishlist';
+
+  //category / Catalog
+  static const catalogNamedScreen = '/catalog';
+  static const categoryDetailsNamedScreen = '/categoryDetails';
 
   //Account
   static const accountNamedScreen = '/account';

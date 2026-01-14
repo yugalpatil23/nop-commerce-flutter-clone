@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
+import '../models/category_model.dart';
 import '../screens/account/account_screen.dart';
 import '../screens/account/contact_us_screen.dart';
 import '../screens/account/my_orders.dart';
@@ -13,6 +14,7 @@ import '../screens/auth/register_screen.dart';
 import '../screens/cart/cart_screen.dart';
 import '../screens/cart/wishlist_screen.dart';
 import '../screens/catalog/catalog_screen.dart';
+import '../screens/catalog/category_details.dart';
 import '../screens/home/home_details_screen.dart';
 import '../screens/home/home_screen.dart';
 import '../screens/main_screen.dart';
@@ -58,6 +60,11 @@ class AppRoutes {
       GoRoute(
         path: Routes.myRewardsNamedScreen,
         builder: (context, state) => const MyRewards(),
+      ),
+      GoRoute(
+        path: Routes.categoryDetailsNamedScreen,
+        builder: (context, state) =>
+            CategoryDetails(category: state.extra as CategoryModel),
       ),
       GoRoute(
         path: '${Routes.productDetailsNamedScreen}/:id',

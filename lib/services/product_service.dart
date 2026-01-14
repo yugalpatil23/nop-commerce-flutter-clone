@@ -40,14 +40,63 @@ class ProductService {
     await Future.delayed(const Duration(seconds: 3));
 
     return [
-      CategoryModel(title: "Food", imageUrl: "https://picsum.photos/200/201"),
-      CategoryModel(title: "Games", imageUrl: "https://picsum.photos/200/202"),
+      CategoryModel(
+        title: "Food",
+        imageUrl: "https://picsum.photos/200/201",
+        id: 1,
+      ),
+      CategoryModel(
+        title: "Games",
+        imageUrl: "https://picsum.photos/200/202",
+        id: 2,
+      ),
       CategoryModel(
         title: "Fashion",
         imageUrl: "https://picsum.photos/200/203",
+        id: 3,
       ),
-      CategoryModel(title: "Tech", imageUrl: "https://picsum.photos/200/204"),
-      CategoryModel(title: "Home", imageUrl: "https://picsum.photos/200/205"),
+      CategoryModel(
+        title: "Tech",
+        imageUrl: "https://picsum.photos/200/204",
+        id: 4,
+      ),
+      CategoryModel(
+        title: "Home",
+        imageUrl: "https://picsum.photos/200/205",
+        id: 5,
+      ),
+    ];
+  }
+
+  Future<List<CategoryModel>> getSubCategories(int categoryId) async {
+    await Future.delayed(const Duration(seconds: 3));
+
+    return [
+      CategoryModel(
+        title: "Food",
+        imageUrl: "https://picsum.photos/200/201",
+        id: 1,
+      ),
+      CategoryModel(
+        title: "Games",
+        imageUrl: "https://picsum.photos/200/202",
+        id: 2,
+      ),
+      CategoryModel(
+        title: "Fashion",
+        imageUrl: "https://picsum.photos/200/203",
+        id: 3,
+      ),
+      CategoryModel(
+        title: "Tech",
+        imageUrl: "https://picsum.photos/200/204",
+        id: 4,
+      ),
+      CategoryModel(
+        title: "Home",
+        imageUrl: "https://picsum.photos/200/205",
+        id: 5,
+      ),
     ];
   }
 }
