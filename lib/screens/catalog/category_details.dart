@@ -33,40 +33,61 @@ class _CategoryDetailsState extends ConsumerState<CategoryDetails> {
 
     return Scaffold(
       // appBar: AppBar(title: Text(category.title)),
-      body: CustomScrollView(
-        slivers: [
-          SliverAppBar(
-            expandedHeight: 200.0,
-            pinned: true,
-            flexibleSpace: FlexibleSpaceBar(
-              title: Text(widget.category.title),
-              background: Image.network(
-                "https://picsum.photos/200",
-                fit: BoxFit.fill,
-              ),
-            ),
-          ),
-          categoriesStore.isSubcategoriesLoading
-              ? SliverFillRemaining(
-                  child: Center(child: AppCircularprogressIndicator()),
-                )
-              : SliverPadding(
-                  padding: const EdgeInsets.all(8.0),
-                  sliver: SliverList.builder(
-                    itemCount: categoriesStore.subCategories.length,
-                    itemBuilder: (BuildContext context, int index) {
-                      return Column(
-                        children: [
-                          CategoryVerticalCard(
-                            category: categoriesStore.subCategories[index],
-                          ),
-                          Divider(height: 0, thickness: 1),
-                        ],
-                      );
-                    },
-                  ),
+      body: RefreshIndicator(
+        onRefresh: () async {
+          ref
+              .read(categoriesProvider.notifier)
+              .getSubCategories(widget.category.id);
+        },
+        child: CustomScrollView(
+          slivers: [
+            SliverAppBar(
+              expandedHeight: 200.0,
+              pinned: true,
+              flexibleSpace: FlexibleSpaceBar(
+                title: Text(widget.category.title),
+                background: Image.network(
+                  "https://picsum.photos/200",
+                  fit: BoxFit.fill,
                 ),
-        ],
+              ),
+              actions: [
+                IconButton(
+                  icon: const Icon(Icons.search),
+                  onPressed: () {
+                    // Implement search functionality
+                  },
+                ),
+                IconButton(
+                  icon: const Icon(Icons.filter_alt),
+                  onPressed: () {
+                    // Implement search functionality
+                  },
+                ),
+              ],
+            ),
+            categoriesStore.isSubcategoriesLoading
+                ? SliverFillRemaining(
+                    child: Center(child: AppCircularprogressIndicator()),
+                  )
+                : SliverPadding(
+                    padding: const EdgeInsets.all(8.0),
+                    sliver: SliverList.builder(
+                      itemCount: categoriesStore.subCategories.length,
+                      itemBuilder: (BuildContext context, int index) {
+                        return Column(
+                          children: [
+                            CategoryVerticalCard(
+                              category: categoriesStore.subCategories[index],
+                            ),
+                            Divider(height: 0, thickness: 1),
+                          ],
+                        );
+                      },
+                    ),
+                  ),
+          ],
+        ),
       ),
     );
   }
