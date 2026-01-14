@@ -11,6 +11,7 @@ class AppTextFormField extends StatelessWidget {
     this.validator,
     this.isRequired = false,
     this.keyboardType,
+    this.prefixIcon,
   });
 
   final TextEditingController controller;
@@ -21,6 +22,7 @@ class AppTextFormField extends StatelessWidget {
   final String? Function(String?)? validator;
   final bool isRequired;
   final TextInputType? keyboardType;
+  final Widget? prefixIcon;
 
   @override
   Widget build(BuildContext context) {
@@ -31,8 +33,9 @@ class AppTextFormField extends StatelessWidget {
         controller: controller,
         obscureText: obscureText,
         keyboardType: keyboardType,
-
+        textAlignVertical: TextAlignVertical.center,
         decoration: InputDecoration(
+          prefixIcon: prefixIcon,
           border: keyboardType == TextInputType.multiline
               ? OutlineInputBorder(borderRadius: BorderRadius.circular(30))
               : null,

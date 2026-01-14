@@ -80,12 +80,14 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                 validator: (value) {
                   return AppValidators.validateEmail(value);
                 },
+                prefixIcon: const Icon(Icons.email),
               ),
 
               const SizedBox(height: 16),
 
               /// Password
               AppTextFormField(
+                prefixIcon: const Icon(Icons.key),
                 suffixIcon: IconButton(
                   icon: Icon(
                     _obscurePassword ? Icons.visibility_off : Icons.visibility,

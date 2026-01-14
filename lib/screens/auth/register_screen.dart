@@ -152,6 +152,7 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
                       ),
                       SizedBox(height: 25),
                       AppTextFormField(
+                        prefixIcon: const Icon(Icons.person),
                         isRequired: true,
                         controller: _firstNameController,
                         labelText: 'First Name',
@@ -166,6 +167,7 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
                       ),
                       SizedBox(height: 10),
                       AppTextFormField(
+                        prefixIcon: const Icon(Icons.person),
                         isRequired: true,
                         controller: _lastNameController,
                         labelText: 'Last Name',
@@ -180,6 +182,7 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
                       SizedBox(height: 10),
 
                       AppTextFormField(
+                        prefixIcon: const Icon(Icons.email),
                         isRequired: true,
                         controller: _emailController,
                         labelText: 'Email',
@@ -205,6 +208,7 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
                       Text("Company details", style: TextStyle(fontSize: 20)),
                       SizedBox(height: 20),
                       AppTextFormField(
+                        prefixIcon: const Icon(Icons.business_center),
                         isRequired: true,
                         controller: _companyController,
                         labelText: 'Company Name',
@@ -258,6 +262,7 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
                       Text("Password", style: TextStyle(fontSize: 20)),
                       SizedBox(height: 20),
                       AppTextFormField(
+                        prefixIcon: const Icon(Icons.key),
                         isRequired: true,
                         suffixIcon: IconButton(
                           icon: Icon(
@@ -281,6 +286,7 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
                       SizedBox(height: 10),
 
                       AppTextFormField(
+                        prefixIcon: const Icon(Icons.key),
                         isRequired: true,
                         suffixIcon: IconButton(
                           icon: Icon(

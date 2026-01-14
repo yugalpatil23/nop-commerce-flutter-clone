@@ -82,6 +82,7 @@ class _ContactUsScreenState extends ConsumerState<ContactUsScreen> {
 
               /// Name
               AppTextFormField(
+                prefixIcon: const Icon(Icons.person),
                 controller: _nameController,
                 labelText: 'Name',
                 keyboardType: TextInputType.text,
@@ -95,6 +96,7 @@ class _ContactUsScreenState extends ConsumerState<ContactUsScreen> {
 
               /// Email
               AppTextFormField(
+                prefixIcon: const Icon(Icons.email),
                 controller: _emailController,
                 labelText: 'Email',
                 keyboardType: TextInputType.emailAddress,
