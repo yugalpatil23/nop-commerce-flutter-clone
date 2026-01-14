@@ -58,4 +58,10 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get change_theme_mode => 'Change Theme Mode';
+
+  @override
+  String get language => 'Language';
+
+  @override
+  String get currency => 'Currency';
 }

@@ -58,4 +58,10 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get change_theme_mode => 'Tema Modunu Değiştir';
+
+  @override
+  String get language => 'Dil';
+
+  @override
+  String get currency => 'Para Birimi';
 }

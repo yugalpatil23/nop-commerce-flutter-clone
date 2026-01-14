@@ -15,5 +15,7 @@
   "register": "Kayıt Ol",
   "setting": "Ayarlar",
   "contact_us": "Bize Ulaşın",
-  "change_theme_mode": "Tema Modunu Değiştir"
+  "change_theme_mode": "Tema Modunu Değiştir",
+  "language": "Dil",
+  "currency":"Para Birimi"
 }

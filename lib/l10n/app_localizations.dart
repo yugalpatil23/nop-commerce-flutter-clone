@@ -198,6 +198,18 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Change Theme Mode'**
   String get change_theme_mode;
+
+  /// No description provided for @language.
+  ///
+  /// In en, this message translates to:
+  /// **'Language'**
+  String get language;
+
+  /// No description provided for @currency.
+  ///
+  /// In en, this message translates to:
+  /// **'Currency'**
+  String get currency;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

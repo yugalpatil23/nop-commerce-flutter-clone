@@ -15,5 +15,7 @@
   "register": "Registreren",
   "setting": "Instellingen",
   "contact_us": "Neem Contact Op",
-  "change_theme_mode": "Thema Wijzigen"
+  "change_theme_mode": "Thema Wijzigen",
+  "language": "Taal",
+  "currency":"Valuta"
 }

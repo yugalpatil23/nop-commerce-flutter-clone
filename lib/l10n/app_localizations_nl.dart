@@ -58,4 +58,10 @@ class AppLocalizationsNl extends AppLocalizations {
 
   @override
   String get change_theme_mode => 'Thema Wijzigen';
+
+  @override
+  String get language => 'Taal';
+
+  @override
+  String get currency => 'Valuta';
 }

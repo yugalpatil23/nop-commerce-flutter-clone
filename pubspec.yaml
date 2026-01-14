@@ -47,6 +47,7 @@ dependencies:
   device_info_plus: ^12.3.0
   flutter_launcher_icons: ^0.14.4
   cached_network_image: ^3.4.1
+  webview_flutter: ^4.13.1
 
 flutter_launcher_icons:
   image_path: "assets/images/app_launcher_icon.png"

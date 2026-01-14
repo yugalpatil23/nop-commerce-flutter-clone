@@ -67,6 +67,7 @@ final menuProvider = Provider<List<AccountMenuModel>>((ref) {
       Icons.contrast_outlined,
       location: '${Routes.accountNamedScreen}${Routes.changeThemeNamedScreen}',
     ),
+    AccountMenuModel('Webview', Icons.web, location: Routes.webviewNamedScreen),
   ]);
 
   if (isLoggedIn) {

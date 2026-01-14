@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:pp_services_platform/l10n/app_localizations.dart';
 
 import '../../providers/currency_provider.dart';
 import '../../providers/language_provider.dart';
@@ -15,9 +16,9 @@ class SettingsScreen extends ConsumerWidget {
     final locale = ref.watch(languageProvider);
     final currency = ref.watch(currencyProvider);
     final tax = ref.watch(taxProvider);
-
+    final l10n = AppLocalizations.of(context)!;
     return Scaffold(
-      appBar: AppBar(title: Text('Settings')),
+      appBar: AppBar(title: Text(l10n.setting)),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(16),
@@ -25,7 +26,7 @@ class SettingsScreen extends ConsumerWidget {
             children: [
               DropdownButtonFormField(
                 initialValue: locale.languageCode,
-                decoration: const InputDecoration(labelText: 'Language'),
+                decoration: InputDecoration(labelText: l10n.language),
                 items: [
                   DropdownMenuItem(
                     value: 'en',
@@ -67,7 +68,7 @@ class SettingsScreen extends ConsumerWidget {
               SizedBox(height: 30),
               DropdownButtonFormField(
                 initialValue: currency,
-                decoration: const InputDecoration(labelText: 'Currency'),
+                decoration: InputDecoration(labelText: l10n.currency),
                 items: [
                   DropdownMenuItem(
                     value: 'USD',

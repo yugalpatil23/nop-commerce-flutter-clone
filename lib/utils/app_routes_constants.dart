@@ -11,6 +11,7 @@ class Routes {
   static const cartNamedScreen = '/cart';
   static const notFoundNamedScreen = '/notfound';
   static const wishlistNamedScreen = '/wishlist';
+  static const webviewNamedScreen = '/webview';
 
   //category / Catalog
   static const catalogNamedScreen = '/catalog';

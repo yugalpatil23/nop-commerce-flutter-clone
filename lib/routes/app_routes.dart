@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:pp_services_platform/screens/webview_screen.dart';
 
 import '../models/category_model.dart';
 import '../screens/account/account_screen.dart';
@@ -65,6 +66,10 @@ class AppRoutes {
         path: Routes.categoryDetailsNamedScreen,
         builder: (context, state) =>
             CategoryDetails(category: state.extra as CategoryModel),
+      ),
+      GoRoute(
+        path: Routes.webviewNamedScreen,
+        builder: (context, state) => const WebviewScreen(),
       ),
       GoRoute(
         path: '${Routes.productDetailsNamedScreen}/:id',

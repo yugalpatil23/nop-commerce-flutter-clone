@@ -15,5 +15,7 @@
   "register": "Register",
   "setting": "Setting",
   "contact_us": "Contact Us",
-  "change_theme_mode": "Change Theme Mode"
+  "change_theme_mode": "Change Theme Mode",
+  "language": "Language",
+  "currency":"Currency"
 }
